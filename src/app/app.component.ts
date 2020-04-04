@@ -8,17 +8,13 @@ import { GitSearchService } from './git-search.service';
 })
 export class AppComponent implements OnInit {
   constructor(private GitSearchService: GitSearchService) {
-    
-
   }
   ngOnInit() {
-
-    this.GitSearchService.gitSearch('html').then( (response) => {
+    this.GitSearchService.gitSearch('html').then((response) => {
       alert("Total Libraries Found:" + response.total_count);
     }, (error) => {
       alert("Error: " + error.statusText)
     })
-    
   }
   title = 'GitHub Browser';
 }
