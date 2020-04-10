@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitSearchService } from './git-search.service';
 import { GitSearchComponent } from './git-search/git-search.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { GitSearchComponent } from './git-search/git-search.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [GitSearchService],
   bootstrap: [AppComponent]
